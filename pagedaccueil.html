@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportifs Martiniquais</title>
+    <link rel="stylesheet" href="css/accueil.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logosportifs.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <select id="profil-select" onchange="goToProfile()">
+                        <option value="">PROFILS SPORTIFS</option>
+                        <option value="biographie-wendie-renard.html">Wendie Renard</option>
+                        <option value="biographie-rose-aimee-bacoul.html">Rose-Aimée Bacoul</option>
+                        <option value="biographie-cedric-sorhaindo.html">Cédric Sorhaindo</option>
+                        <option value="biographie-max-morinière.html">Max Morinière</option>
+                        <option value="biographie-warren-zaire-emery.html">Warren Zaïre-Emery</option>
+                        <option value="biographie-cédric-eustache.html">Cédric Eustache</option>
+                        <option value="biographie-coralie-balmy.html">Coralie Balmy</option>
+                        <option value="biographie-sandrine-gruda.html">Sandrine Gruda</option>
+                        <option value="biographie-mélanie-de-jesus-dos-santos.html">Mélanie de Jesus dos Santos</option>
+                        <option value="biographie-christophe-maleau.html">Christophe Maleau</option>
+                    </select>
+                </li>
+                <li>
+                    <select id="language-select" onchange="changeLanguage()">
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </li>
+                <li><a id="news-link" href="actualite.html">ACTUALITÉS</a></li>
+                <li><a id="calendar-link" href="calendrier.html">CALENDRIER</a></li>
+                <li><a id="community-link" href="discussion.html">COMMUNAUTÉ</a></li>
+                <li><a id="partnerships-link" href="partenariat.html">PARTENARIATS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <img src="https://peuple-vert.fr/wp-content/uploads/2021/09/Icon_onz_090977_05_17-scaled.jpg"
+                alt="Gérard Janvion">
+            <div class="overlay">
+                <h1 id="hero-title">Quand les sportifs martiniquais inspirent l'excellence</h1>
+                <p id="hero-author">Gérard Janvion<br><span id="hero-bio">"L'inoubliable" - Fair play</span></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="qr-code">
+            <img src="img/frame.png" alt="QR Code">
+        </div>
+    </footer>
+
+    <script src="js/accueil.js"></script>
+</body>
+
+</html>

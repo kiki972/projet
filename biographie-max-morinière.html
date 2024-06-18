@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Morinière</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .biography {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: url('https://medias.antilles-sport.com/1/photos/2015/09/max-moriniere-tout-le-monde-veut-venir-en-martinique/moriniere.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .biography-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            overflow-y: auto;
+            color: white;
+        }
+
+        .biography-content h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .biography-content p,
+        .biography-content ul {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .biography-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .biography-content ul li {
+            margin-bottom: 10px;
+        }
+
+        .qr-code {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .qr-code img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="biography">
+        <div class="biography-content">
+            <h1>Max Morinière</h1>
+            <p>Max Morinière, né le 16 février 1964 à Fort-de-France, en Martinique, est un athlète martiniquais,
+                pratiquant le sprint.</p>
+            <p><strong>Palmarès :</strong></p>
+            <ul>
+                <li>1988 : Jeux Olympiques à Séoul, 3ème sur le 4 x 100m.</li>
+                <li>1989 : Jeux de la Francophonie à Casablanca, 3ème sur le 100m, 1er sur le 4 x 100m.</li>
+                <li>1990 : Champion d’Europe sur le 4 x 100m à Split</li>
+                <li>1991 : Vice-champion du monde à Tokyo sur le 4 x 100m</li>
+            </ul>
+        </div>
+        <div class="qr-code">
+            <img src="img/shared_image.png" alt="QR Code">
+        </div>
+    </div>
+</body>
+
+</html>
