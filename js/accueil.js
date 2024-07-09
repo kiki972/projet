@@ -36,7 +36,7 @@ function changeLanguage() {
     var translate = translations[language];
 
     document.getElementById('profil-select').options[0].innerText = translate['profiles'];
-    document.getElementById('news-link').innerText = translate['news'];
+    document.getElementById('blog-link').innerText = translate['blog'];
     document.getElementById('calendar-link').innerText = translate['calendar'];
     document.getElementById('community-link').innerText = translate['community'];
     document.getElementById('partnerships-link').innerText = translate['partnerships'];
