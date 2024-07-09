@@ -1,7 +1,7 @@
 var translations = {
     'fr': {
         'profiles': 'PROFILS SPORTIFS',
-        'news': 'ACTUALITÉS',
+        'news': 'BLOG',
         'calendar': 'CALENDRIER',
         'community': 'COMMUNAUTÉ',
         'partnerships': 'PARTENARIATS',
@@ -11,7 +11,7 @@ var translations = {
     },
     'en': {
         'profiles': 'SPORTS PROFILES',
-        'news': 'NEWS',
+        'news': 'BLOG',
         'calendar': 'CALENDAR',
         'community': 'COMMUNITY',
         'partnerships': 'PARTNERSHIPS',
@@ -21,7 +21,7 @@ var translations = {
     },
     'es': {
         'profiles': 'PERFILES DEPORTIVOS',
-        'news': 'NOTICIAS',
+        'news': 'BLOG',
         'calendar': 'CALENDARIO',
         'community': 'COMUNIDAD',
         'partnerships': 'SOCIOS',
