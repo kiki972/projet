@@ -19,6 +19,47 @@ class Commentaire {
         $this->id_utilisateur = $id_utilisateur;
     }
 
+    // Getters et setters
+    public function getIdCommentaire() {
+        return $this->id_commentaire;
+    }
+
+    public function getContenu() {
+        return $this->contenu;
+    }
+
+    public function getDateCommentaire() {
+        return $this->date_commentaire;
+    }
+
+    public function getIdArticle() {
+        return $this->id_article;
+    }
+
+    public function getIdUtilisateur() {
+        return $this->id_utilisateur;
+    }
+
+    public function setIdCommentaire($id_commentaire) {
+        $this->id_commentaire = $id_commentaire;
+    }
+
+    public function setContenu($contenu) {
+        $this->contenu = $contenu;
+    }
+
+    public function setDateCommentaire($date_commentaire) {
+        $this->date_commentaire = $date_commentaire;
+    }
+
+    public function setIdArticle($id_article) {
+        $this->id_article = $id_article;
+    }
+
+    public function setIdUtilisateur($id_utilisateur) {
+        $this->id_utilisateur = $id_utilisateur;
+    }
+
     // Méthode pour insérer un nouveau commentaire
     public function inserer() {
         $sql = "INSERT INTO commentaires (Contenu, Date_commentaire, ID_article, ID_utilisateur) VALUES (:contenu, :date_commentaire, :id_article, :id_utilisateur)";
@@ -110,10 +151,10 @@ try {
 
     // Mise à jour du commentaire
     $commentaire->initialize('Commentaire mis à jour.', '2024-07-09 12:30:00', 1, 1);
-    $commentaire->mettreAJour($commentaire->id_commentaire);
+    $commentaire->mettreAJour($commentaire->getIdCommentaire());
 
     // Suppression du commentaire
-    $commentaire->supprimer($commentaire->id_commentaire);
+    $commentaire->supprimer($commentaire->getIdCommentaire());
 
     // Récupération d'un commentaire par ID
     $commentaire->recupererParID(1);
