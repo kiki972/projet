@@ -1,0 +1,121 @@
+<?php
+// index.php
+
+require_once 'CommentManager.php';
+
+$commentManager = new CommentManager($pdo);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['comment'])) {
+    $comment = new Comment($_POST['comment']);
+    $commentManager->addComment($comment);
+}
+
+$comments = $commentManager->getComments();
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Discussion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+        }
+
+        .left-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f8f8;
+        }
+
+        .left-section img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .right-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('https://i.pinimg.com/736x/92/0c/d1/920cd121570a4ec3ef9d9062e5ceb488.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 20px;
+        }
+
+        .right-section h1 {
+            font-size: 2em;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .discussion-box {
+            width: 80%;
+            height: 300px;
+            background: white;
+            opacity: 0.8;
+            border: 2px solid black;
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 1em;
+            resize: none;
+        }
+
+        .send-button {
+            width: 150px;
+            padding: 10px;
+            font-size: 1em;
+            color: white;
+            background: linear-gradient(to right, #0062E6, #33AEFF);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .send-button:hover {
+            background: linear-gradient(to right, #005bb5, #2a96db);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img src="https://www.femto-st.fr/sites/default/files/styles/full_width/public/articles/docs/conversation.png?itok=LLCAWxYN"
+                alt="Illustration de discussion">
+        </div>
+        <div class="right-section">
+            <h1>ESPACE DISCUSSION</h1>
+            <form method="POST" action="index.php">
+                <textarea class="discussion-box" name="comment" placeholder="Écrivez votre message ici..."></textarea>
+                <button type="submit" class="send-button">ENVOYER</button>
+            </form>
+            <div class="comments-section">
+                <?php foreach ($comments as $comment): ?>
+                    <div class="comment">
+                        <p><?= htmlspecialchars($comment->getContent()) ?></p>
+                        <span><?= $comment->getCreatedAt() ?></span>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
