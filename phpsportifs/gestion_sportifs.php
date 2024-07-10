@@ -32,7 +32,7 @@
             <th>Prénom</th>
             <th>Biographie</th>
             <th>Palmarès</th>
-            <th>Actions</th>
+            <!-- <th>Actions</th> -->
         </tr>
         <?php
         // Inclure la classe Sportif et la connexion à la base de données
@@ -64,10 +64,10 @@
                 echo "<td>{$Prenom}</td>";
                 echo "<td>{$Biographie}</td>";
                 echo "<td>{$Palmares}</td>";
-                echo "<td>";
+                // echo "<td>";
                 // echo "<a href='modifier_sportif.php?id_sportif={$ID_sportif}'>Modifier</a> | ";
                 // echo "<a href='supprimer_sportif.php?id_sportif={$ID_sportif}'>Supprimer</a>";
-                echo "</td>";
+                // echo "</td>";
                 echo "</tr>";
             }
         } else {
