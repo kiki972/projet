@@ -103,7 +103,7 @@ $comments = $commentManager->getComments();
         </div>
         <div class="right-section">
             <h1>ESPACE DISCUSSION</h1>
-            <form method="POST" action="index.php">
+            <form method="POST" action="espacediscussion.php">
                 <textarea class="discussion-box" name="comment" placeholder="Écrivez votre message ici..."></textarea>
                 <button type="submit" class="send-button">ENVOYER</button>
             </form>

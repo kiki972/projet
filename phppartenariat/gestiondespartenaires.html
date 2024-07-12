@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partenariat</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .partenariat-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            background-size: cover;
+            height: 100vh;
+            opacity: 0.9;
+            background-attachment: fixed;
+            background-position: center 50%;
+        }
+
+        .partner img {
+            max-width: 100px;
+            margin: 10px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="partenariat-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://upload.wikimedia.org/wikipedia/commons/4/4d/Stade_louis_achille4.jpg');">
+        <div class="partners">
+            <div class="partner">
+                <img src="https://josephgaillardweb.fr/wp-content/uploads/2023/05/logo.png" alt="Logo Joseph Gaillard">
+            </div>
+            <div class="partner">
+                <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/7/7e/Logo_Casden_2010.svg/2560px-Logo_Casden_2010.svg.png" alt="Logo CASDEN">
+            </div>
+            <div class="partner">
+                <img src="https://decdpgpiaurvk.cloudfront.net/wp-content/uploads/2018/12/12112323/CTOSMA-Copie.png" alt="Logo CTOS">
+            </div>
+            <div class="partner">
+                <img src="https://www.madinin-art.net/wp-content/uploads/2023/10/institut_martiniquais_du_sport.jpg" alt="Logo IMS">
+            </div>
+            <div class="partner">
+                <img src="https://upload.wikimedia.org/wikipedia/fr/6/62/Logo_cnfpt.svg" alt="Logo CNPT">
+            </div>
+        </div>
+        <div class="buttons">
+            <button onclick="location.href='create.php'">Ajouter</button>
+            <button onclick="location.href='update.php'">Mettre à jour</button>
+            <button onclick="location.href='delete.php'">Supprimer</button>
+            <button onclick="location.href='cancel.php'">Annuler</button>
+            <button onclick="location.href='list.php'">Afficher la liste</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .calendar-section {
+            background-size: cover;
+            padding: 50px;
+            text-align: center;
+            height: 100vh;
+        }
+
+        .calendar {
+            background: white;
+            padding: 20px;
+            width: 60%;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .form-container {
+            margin: 20px;
+        }
+
+        .form-container form {
+            margin-bottom: 20px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calendar-section"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://saintjoseph972.com/wp-content/uploads/2023/01/322185555_5772923179453028_4657332333810531129_n.jpg');">
+        <div class="calendar">
+            <iframe src="https://calendar.google.com/calendar/embed?src=kmaugee972%40gmail.com&ctz=America%2FMartinique"
+                style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <div class="form-container">
+            <h3>Ajouter un événement</h3>
+            <form action="create_event.php" method="post">
+                <input type="text" name="Titre" placeholder="Titre" required>
+                <input type="date" name="Date" placeholder="Date" required>
+                <input type="text" name="Lieu" placeholder="Lieu" required>
+                <textarea name="Description" placeholder="Description"></textarea>
+                <button type="submit">Ajouter</button>
+            </form>
+
+            <h3>Mettre à jour un événement</h3>
+            <form action="update_event.php" method="post">
+                <input type="number" name="ID_evénement" placeholder="ID de l'événement" required>
+                <input type="text" name="Titre" placeholder="Titre" required>
+                <input type="date" name="Date" placeholder="Date" required>
+                <input type="text" name="Lieu" placeholder="Lieu" required>
+                <textarea name="Description" placeholder="Description"></textarea>
+                <button type="submit">Mettre à jour</button>
+            </form>
+
+            <h3>Supprimer un événement</h3>
+            <form action="delete_event.php" method="post">
+                <input type="number" name="ID_evénement" placeholder="ID de l'événement" required>
+                <button type="submit">Supprimer</button>
+            </form>
+
+            <h3>Afficher la liste des événements</h3>
+            <button onclick="fetchEvents()">Afficher les événements</button>
+            <div id="events-list"></div>
+        </div>
+    </div>
+
+    <script>
+        function fetchEvents() {
+            fetch('read_events.php')
+                .then(response => response.json())
+                .then(data => {
+                    const eventsList = document.getElementById('events-list');
+                    eventsList.innerHTML = '<ul>' + data.map(event => `<li>${event.Titre} (${event.Date}) - ${event.Lieu}</li>`).join('') + '</ul>';
+                });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 var translations = {
     'fr': {
         'profiles': 'PROFILS SPORTIFS',
-        'news': 'BLOG',
+        'blog': 'BLOG',
         'calendar': 'CALENDRIER',
         'community': 'COMMUNAUTÉ',
         'partnerships': 'PARTENARIATS',
@@ -11,7 +11,7 @@ var translations = {
     },
     'en': {
         'profiles': 'SPORTS PROFILES',
-        'news': 'BLOG',
+        'blog': 'BLOG',
         'calendar': 'CALENDAR',
         'community': 'COMMUNITY',
         'partnerships': 'PARTNERSHIPS',
@@ -21,7 +21,7 @@ var translations = {
     },
     'es': {
         'profiles': 'PERFILES DEPORTIVOS',
-        'news': 'BLOG',
+        'blog': 'BLOG',
         'calendar': 'CALENDARIO',
         'community': 'COMUNIDAD',
         'partnerships': 'SOCIOS',
@@ -35,7 +35,11 @@ function changeLanguage() {
     var language = document.getElementById('language-select').value;
     var translate = translations[language];
 
-    document.getElementById('profil-select').options[0].innerText = translate['profiles'];
+    var profilSelect = document.getElementById('profil-select');
+    if (profilSelect) {
+        profilSelect.options[0].innerText = translate['profiles'];
+    }
+
     document.getElementById('blog-link').innerText = translate['blog'];
     document.getElementById('calendar-link').innerText = translate['calendar'];
     document.getElementById('community-link').innerText = translate['community'];
