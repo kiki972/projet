@@ -30,24 +30,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mettre à jour un Sportif</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <form method="POST" enctype="multipart/form-data">
-        <label for="ID_sportif">ID Sportif:</label>
-        <input type="text" name="ID_sportif" id="ID_sportif" required><br>
-        <label for="Nom">Nom:</label>
-        <input type="text" name="Nom" id="Nom" required><br>
-        <label for="Prénom">Prénom:</label>
-        <input type="text" name="Prénom" id="Prénom" required><br>
-        <label for="Biographie">Biographie:</label>
-        <textarea name="Biographie" id="Biographie"></textarea><br>
-        <label for="Palmarès">Palmarès:</label>
-        <textarea name="Palmarès" id="Palmarès"></textarea><br>
-        <label for="Photo">Photo:</label>
-        <input type="file" name="Photo" id="Photo"><br>
-        <label for="QR_Code">QR Code:</label>
-        <input type="file" name="QR_Code" id="QR_Code"><br>
-        <button type="submit">Mettre à jour</button>
-    </form>
+    <div class="container mt-5">
+        <h2>Mettre à jour un Sportif</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="ID_sportif">ID Sportif:</label>
+                <input type="text" class="form-control" name="ID_sportif" id="ID_sportif" required>
+            </div>
+            <div class="form-group">
+                <label for="Nom">Nom:</label>
+                <input type="text" class="form-control" name="Nom" id="Nom" required>
+            </div>
+            <div class="form-group">
+                <label for="Prénom">Prénom:</label>
+                <input type="text" class="form-control" name="Prénom" id="Prénom" required>
+            </div>
+            <div class="form-group">
+                <label for="Biographie">Biographie:</label>
+                <textarea class="form-control" name="Biographie" id="Biographie"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="Palmarès">Palmarès:</label>
+                <textarea class="form-control" name="Palmarès" id="Palmarès"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="Photo">Photo:</label>
+                <input type="file" class="form-control-file" name="Photo" id="Photo">
+            </div>
+            <div class="form-group">
+                <label for="QR_Code">QR Code:</label>
+                <input type="file" class="form-control-file" name="QR_Code" id="QR_Code">
+            </div>
+            <button type="submit" class="btn btn-primary">Mettre à jour</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>
