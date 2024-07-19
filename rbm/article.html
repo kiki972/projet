@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        .article-1, .article-3 {
+            background-color: #F4B652;
+        }
+        .article-2 {
+            background-color: #EDD1A5;
+        }
+        .article-date, .article-author {
+            color: blue;
+        }
+        .btn-custom {
+            background-color: blue;
+            color: black;
+        }
+        .btn-warning-custom {
+            background-color: orange;
+            color: white;
+        }
+        .input-group .fa-envelope {
+            padding: 10px;
+            background: #ddd;
+            border-right: 0;
+        }
+        .form-control {
+            border-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-md-8">
+                <!-- Header -->
+                <h1 class="mt-4">Articles</h1>
+                
+                <!-- Article 1 -->
+                <div class="card mb-4 article-1">
+                    <img src="https://cdn.pixabay.com/photo/2024/06/30/13/41/iguana-8863156_1280.jpg" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                        <h2 class="card-title">Les iguanes</h2><i class="fa-regular fa-star"></i>
+                        <p class="card-text"><small class="text-muted article-date">Publié le 15 Juillet 2024</small> par <small class="text-muted article-author">Roger Lépicer</small></p>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Un enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+                        <a href="#" class="btn btn-custom">Lire la suite</a>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="card mb-4 article-2">
+                    <img src="https://cdn.pixabay.com/photo/2020/02/27/12/21/martinique-4884459_1280.jpg" class="card-img-top" alt="Image 2">
+                    <div class="card-body">
+                        <h2 class="card-title">Les plages de Martinique</h2><i class="fa-solid fa-star"></i>
+                        <p class="card-text"><small class="text-muted article-date">Publié le 20 Juin 2024</small> par <small class="text-muted article-author">Dorene Marier</small></p>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Un enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+                        <a href="#" class="btn btn-custom">Lire la suite</a>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="card mb-4 article-3">
+                    <img src="https://www.shutterstock.com/image-photo/banana-farms-plantations-inside-greenhouses-600nw-2214745093.jpg" class="card-img-top" alt="Image 3">
+                    <div class="card-body">
+                        <h2 class="card-title">Les champs de banane</h2><i class="fa-regular fa-star"></i>
+                        <p class="card-text"><small class="text-muted article-date">Publié le 25 Juin 2024</small> par <small class="text-muted article-author">Dorene Marier</small></p>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Un enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+                        <a href="#" class="btn btn-custom">Lire la suite</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-4">
+                <!-- Newsletter Subscription -->
+                <div class="card my-4">
+                    <h5 class="card-header">Sourcrirez à la newsletter</h5>
+                    <div class="card-body">
+                        <form>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                                </div>
+                                <input type="email" class="form-control" placeholder="Votre adresse email...">
+                            </div>
+                            <button class="btn btn-primary btn-block" type="button">Abonnez-vous</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Newsletters Download -->
+                <div class="card my-4">
+                    <h5 class="card-header">Voir newsletter de Mai 2024</h5>
+                    <div class="card-body">
+                        <img src="https://www.martinique-tour.com/app/uploads/martinique-tour/2023/01/thumbs/alpinia-fleur-martinique-640x854.jpg" class="img-fluid mb-2" alt="Newsletter 1">
+                        <a href="#" class="btn btn-warning-custom btn-block">TELECHARGER</a>
+                    </div>
+                </div>
+                
+                <div class="card my-4">
+                    <h5 class="card-header">Voir newsletter de Mai 2024</h5>
+                    <div class="card-body">
+                        <img src="https://www.reseau-canope.fr/fileadmin/user_upload/_processed_/8/a/csm_fo_valere_cap_2_6188405904.jpg" class="img-fluid mb-2" alt="Newsletter 2">
+                        <a href="#" class="btn btn-warning-custom btn-block">TELECHARGER</a>
+                    </div>
+                </div>
+
+                <div class="card my-4">
+                    <h5 class="card-header">Voir newsletter de Mai 2024</h5>
+                    <div class="card-body">
+                        <img src="https://azmartinique.com/sites/azmartinique.com/files/lieux-a-visiter/la-savane.jpg" class="img-fluid mb-2" alt="Newsletter 3">
+                        <a href="#" class="btn btn-warning-custom btn-block">TELECHARGER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
