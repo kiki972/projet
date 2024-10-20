@@ -7,8 +7,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #1c1c1e;
+    padding: 20px;
+    background-color: #282828;
     color: white;
 }
 
@@ -66,8 +66,8 @@ select:focus {
 }
 
 .overlay h1 {
-    font-size: 2.5em;
-    margin: 0;
+    font-size: 3em; /* Taille de police modifiée */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ajouter une ombre pour améliorer la lisibilité */
 }
 
 .overlay p {
@@ -79,7 +79,7 @@ footer {
     display: flex;
     justify-content: center;
     padding: 20px;
-    background-color: #1c1c1e;
+    background-color: #282828; /* Assurez-vous que cela correspond à la nouvelle maquette */
 }
 
 .qr-code img {
